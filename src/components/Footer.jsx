@@ -1,5 +1,6 @@
 import { FaLinkedin, FaTiktok } from "react-icons/fa";
 import { motion } from "framer-motion";
+import elizabethImg from "../assets/elizabeth.jpg"; // import image from src/assets
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <img
-            src="/elizabeth.jpg"
+            src={elizabethImg} // use imported image
             alt="Elizabeth Wanjiku"
             className="w-12 h-12 rounded-full border-2 border-accent object-cover"
           />
