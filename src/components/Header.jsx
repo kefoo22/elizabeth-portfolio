@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ElizabethImage from "../assets/elizabeth.jpg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +13,15 @@ export default function Header() {
     visible: { opacity: 1, y: 0 },
   };
 
+  const sections = ["about", "services", "testimonials", "contact"];
+
   return (
     <header className="bg-secondary text-white py-4 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between px-6">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <img
-            src={ElizabethImage}
+            src="/elizabeth.jpg" // Public folder path
             alt="Elizabeth Wanjiku"
             className="w-16 h-16 rounded-full border-2 border-accent object-cover"
           />
@@ -34,7 +35,7 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium">
-          {["about", "services", "testimonials", "contact"].map((section) => (
+          {sections.map((section) => (
             <Link
               key={section}
               to={section}
@@ -72,7 +73,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-secondary px-6 py-4 flex flex-col space-y-4"
           >
-            {["about", "services", "testimonials", "contact"].map((section) => (
+            {sections.map((section) => (
               <Link
                 key={section}
                 to={section}
