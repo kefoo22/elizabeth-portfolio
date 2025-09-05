@@ -7,12 +7,19 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-primary text-accent">
+    <div className="bg-primary text-light font-sans">
+      {/* Header with navigation */}
       <Header />
-      <About />
-      <Services />
-      <Testimonials />
-      <Contact />
+
+      {/* Main content */}
+      <main>
+        <About />
+        <Services />
+        <Testimonials />
+        <Contact />
+      </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

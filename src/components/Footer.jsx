@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-primary py-6 text-center text-sm text-accent border-t border-secondary">
-      © {new Date().getFullYear()} Elizabeth Wanjiku. All Rights Reserved.
+    <footer className="py-6 bg-primary text-center text-white">
+      <p>© {new Date().getFullYear()} Elizabeth Wanjiku. All rights reserved.</p>
     </footer>
   );
 }
