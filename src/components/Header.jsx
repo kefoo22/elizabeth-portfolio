@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import elizabethImg from "../assets/elizabeth.jpg"; // import image from src/assets
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <img
-            src="/elizabeth.jpg"
+            src={elizabethImg} // use imported image
             alt="Elizabeth Wanjiku"
             className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-accent object-cover object-center"
           />
