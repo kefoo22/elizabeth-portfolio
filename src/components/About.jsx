@@ -18,10 +18,10 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg leading-relaxed mb-4">
-              I’m a passionate Biology and Chemistry teacher from Nyandarua County, Kenya, dedicated to helping students excel in science. Currently teaching at <strong>Turasha Secondary School</strong>, I prepare students for KCSE exams, lead lab sessions, and mentor learners in academic and extracurricular science activities.
+              I’m a passionate Biology and Chemistry teacher from Nyandarua County, Kenya, dedicated to helping students excel in science. Currently teaching at <strong>Turasha Secondary School</strong>, I prepare students for <strong>KCSE exams</strong>, lead laboratory sessions, and mentor learners in academic and extracurricular science activities. I have extensive experience teaching both the <strong>8-4-4 curriculum</strong> and the <strong>Competence-Based Education (CBE) curriculum</strong>, ensuring students not only understand theoretical concepts but also develop practical skills and problem-solving abilities.
             </p>
             <p className="text-lg leading-relaxed">
-              I hold a <strong>Bachelor of Education in Biology and Chemistry</strong> from the University of Embu and aspire to pursue a Master’s degree to deepen my expertise and teach at the college level. My goal is to create engaging, interactive learning experiences that inspire curiosity and academic excellence in every student.
+              I hold a <strong>Bachelor of Education in Biology and Chemistry</strong> from the University of Embu and aspire to pursue a Master’s degree to deepen my expertise and teach at the college level. My goal is to create engaging, interactive learning experiences that inspire curiosity, critical thinking, and academic excellence in every student.
             </p>
           </motion.div>
 

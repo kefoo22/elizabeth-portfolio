@@ -1,29 +1,48 @@
+import { motion } from "framer-motion";
+
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Elizabeth’s Biology and Chemistry lessons are clear, engaging, and practical. She helped me improve my grades and boosted my confidence in science.",
-      author: "Former Student",
+      name: "Jane Mwangi",
+      role: "KCSE Student",
+      comment:
+        "Elizabeth's teaching style is amazing! Her lessons are engaging, and she really helped me understand difficult Biology and Chemistry concepts.",
     },
     {
-      quote: "My daughter looks forward to every session. Elizabeth is patient, encouraging, and makes complex concepts easy to understand.",
-      author: "Parent",
+      name: "Peter Kamau",
+      role: "Parent",
+      comment:
+        "My daughter improved her grades tremendously after Elizabeth started tutoring her. She is professional, patient, and motivating.",
     },
     {
-      quote: "A highly professional and dedicated teacher. She goes beyond the syllabus to ensure students fully grasp the subject and enjoy learning.",
-      author: "Colleague",
+      name: "Mary Wanjiru",
+      role: "Colleague",
+      comment:
+        "Working with Elizabeth is a pleasure. She brings creativity and dedication to science teaching, inspiring both students and staff.",
     },
   ];
 
   return (
     <section id="testimonials" className="py-16 px-6 bg-primary text-light">
-      <div className="container mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold mb-6 text-accent">Testimonials</h2>
-        <div className="space-y-6">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-3xl font-bold mb-10 text-accent text-center md:text-left">
+          Testimonials
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <div key={index} className="bg-secondary p-6 rounded-lg shadow-lg">
-              <p className="italic mb-2">"{t.quote}"</p>
-              <p className="font-semibold text-accent">— {t.author}</p>
-            </div>
+            <motion.div
+              key={t.name}
+              className="bg-secondary p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+            >
+              <p className="text-light italic mb-4">"{t.comment}"</p>
+              <p className="font-semibold text-accent">{t.name}</p>
+              <p className="text-sm text-light">{t.role}</p>
+            </motion.div>
           ))}
         </div>
       </div>
